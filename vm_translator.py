@@ -185,14 +185,20 @@ def translate_vm_to_asm(inp, outname=None):
     with open(outname, 'w') as f:
         f.write(out_str)
 
+
+if __name__ == "__main__":
+    import argparse
+    import os
+    import sys
+
     parser = argparse.ArgumentParser(
         description="Enter path of directory or file to translate")
     
     parser.add_argument('filename', action="store")
-    parser.add_argument('outname', action="store", default=None)
+    parser.add_argument('-o', '--outfile' , action="store", default=None, dest='outname')
     args = parser.parse_args()
     fname = args.filename
-    outname = args.output
+    outname = args.outname
     if not os.path.exists(fname):
         print("Path doesn't exist")
         sys.exit()
@@ -200,27 +206,3 @@ def translate_vm_to_asm(inp, outname=None):
     translate_vm_to_asm(fname, outname)
     print("File translated...\nHave fun.")
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if __name__ == "__main__":
-    import argparse
-    import os
-    import sys
