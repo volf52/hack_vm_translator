@@ -1,7 +1,7 @@
 # HACK VM Translator
 ---
 
-VM Translator for HACK (project 7-8 of [nand2tetris course])(https://www.nand2tetris.org/)
+VM Translator for HACK (project 7-8 of [nand2tetris course](<https://www.nand2tetris.org/>))
 Serves as the backend for Jack Compiler. Translates code from an intermediate representation (for stack manipulation and processing) to HACK assembly code.
 
 ___
